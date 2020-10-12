@@ -29,7 +29,9 @@ Small tool for hosting NodeJS apps on private vps using github hooks for continu
 
 ### Start a pm2 process to compile ES6 code
 
-- pm2 start 'nodemon --exec ./node_modules/.bin/babel src --out-dir dist --watch src -e js,html,css,jsx' --name mamiCli --no-autorestart
+- npx nodemon --exec ./node_modules/.bin/babel src --out-dir dist --watch src -e js,html,css,jsx
+- OR
+- pm2 start 'npx nodemon --exec ./node_modules/.bin/babel src --out-dir dist --watch src -e js,html,css,jsx' --name mamiCli --no-autorestart
 
 ### After development
 - npm unlink (unlink bin command)
